@@ -1,4 +1,4 @@
-package com.habib.sample;
+package com.habib.sample.cosmosdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

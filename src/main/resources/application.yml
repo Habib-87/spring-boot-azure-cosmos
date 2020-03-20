@@ -1,1 +1,27 @@
+# This is the MongoDB URL for my Local Cosmos Emulater. You need to install  Cosmos Emulater in local and replace the URL to make it work. Same way the URL would be replaced if we are accessing cosmos db from Azure portal.
+# This would be only changes if we trying to access Cosmos DB from Azure Cloud.
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:C2y6yDjf5%2FR%2Bob0N8A7Cgv30VRDJIWEHLM%2B4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw%2FJw%3D%3D@localhost:10255/admin?ssl=true
+      
+      database: localhost
+     
 
+      
+server:
+  port: 9089
+  
+  
+logging: 
+   level:
+      org.springframework.web: DEBUG  
+  
+   pattern:
+    console:  "%d{yyyy-MM-dd HH:mm:ss} [%thread] [%-5level] %logger{36} : [%X{CorrelationId}] -- %msg %n"    
+      
+
+      
+cosmos-db-config:
+   dbname: WorkerRefData
+  
