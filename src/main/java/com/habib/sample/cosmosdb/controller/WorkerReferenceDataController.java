@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -75,9 +76,14 @@ public class WorkerReferenceDataController {
 	/**
 	 * Save the Plant Location and Name data while initializing the service.This is predefined refrence data so wants to save it before accessing it.
 	 */
-	@PostConstruct
+	/*@PostConstruct
 	public void init() {
 		service.createPlantLocationNames();
+	}*/
+
+	@RequestMapping(value = "/health", method = RequestMethod.GET)
+	public ResponseEntity<String> getHealth() {
+		return ResponseEntity.ok("Connection Successful");
 	}
 
 }

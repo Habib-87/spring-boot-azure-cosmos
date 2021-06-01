@@ -46,7 +46,7 @@ public class WorkerReferenceDataService {
 
 	public List<PlantLocationNameResponse> getPlantLocations(String plantName) {
 		logger.info("Calling custom repo to fetch details based on plant name");
-		var plantLocationsNames = customRepo.getPlantLocationsByName(plantName);
+		List<PlantLocationName> plantLocationsNames = customRepo.getPlantLocationsByName(plantName);
 		List<PlantLocationNameResponse> responses = plantLocationsNames.stream().map(name -> {
 			PlantLocationNameResponse plantLocationName = new PlantLocationNameResponse();
 			plantLocationName.setPlantLocation(name.getPlantLocation());
@@ -59,7 +59,7 @@ public class WorkerReferenceDataService {
 
 	public List<PlantLocationNameResponse> getPlantNames(String plantLocation) {
 		logger.info("Calling default data  to fetch details based on plant name");
-		var plantLocationsNames = repo.findByPlantLocation(plantLocation.toUpperCase());
+		List<PlantLocationName> plantLocationsNames = repo.findByPlantLocation(plantLocation.toUpperCase());
 		List<PlantLocationNameResponse> responses = plantLocationsNames.stream().map(name -> {
 			PlantLocationNameResponse plantLocationName = new PlantLocationNameResponse();
 			plantLocationName.setPlantLocation(name.getPlantLocation());
@@ -80,7 +80,7 @@ public class WorkerReferenceDataService {
 	public WorkerLocationResponse addWorkerLocation(String WORKERID, WorkerLocationRequest request) {
 
 		WorkerLocation wl = new WorkerLocation(WORKERID, request.getLocation());
-		var savedObject = customRepo.addWorkerLocation(wl);
+		WorkerLocation savedObject = customRepo.addWorkerLocation(wl);
 		WorkerLocationResponse response = new WorkerLocationResponse();
 		response.setWorkerid(savedObject.getWorkerid());
 		response.setLocation(savedObject.getLocation());
@@ -88,7 +88,7 @@ public class WorkerReferenceDataService {
 	}
 
 	public WorkerLocationResponse getWorkerLocation(String WORKERID) {
-		var wl = customRepo.getWorkerLocation(WORKERID);
+		WorkerLocation wl = customRepo.getWorkerLocation(WORKERID);
 		WorkerLocationResponse response = new WorkerLocationResponse();
 		response.setWorkerid(wl.getWorkerid());
 		response.setLocation(wl.getLocation());

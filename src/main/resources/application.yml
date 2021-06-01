@@ -3,7 +3,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:C2y6yDjf5%2FR%2Bob0N8A7Cgv30VRDJIWEHLM%2B4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw%2FJw%3D%3D@localhost:10255/admin?ssl=true
+      uri: mongodb://cosmos-db-boot-poc:2AyQFmNe1BzcvLLuxieUNImnF8vsS4QQyRmfy16MhbdJKgxthxCCEBLgnYaK0L34qTMyvWnhQPb64qhg0gw7kQ==@cosmos-db-boot-poc.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@cosmos-db-boot-poc@
       
       database: localhost
      
