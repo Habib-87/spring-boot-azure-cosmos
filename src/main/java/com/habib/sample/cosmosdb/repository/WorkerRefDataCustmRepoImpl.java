@@ -67,6 +67,14 @@ public class WorkerRefDataCustmRepoImpl implements WorkerRefDataCustomRepo {
 		WorkerLocation wl = mongoTemplate.findById(WORKERID, WorkerLocation.class);
 		return wl;
 	}
+
+	@Override
+	public List<WorkerLocation> getWorkerLocations() {
+		logger.info("Query to get all worker locations");
+		Query query = new Query();
+		List<WorkerLocation>  plants = mongoTemplate.findAll(WorkerLocation.class);
+		return plants;
+	}
 	
 	
 	/**

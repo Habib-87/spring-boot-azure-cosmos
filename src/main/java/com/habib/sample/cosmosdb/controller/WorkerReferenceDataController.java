@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/worker/refdata/v1/workersdata")
+@RequestMapping("/v1/workersdata")
 public class WorkerReferenceDataController {
 
 	private WorkerReferenceDataService service;
@@ -63,6 +63,16 @@ public class WorkerReferenceDataController {
 	public WorkerLocationResponse getWorkerLocation(@PathVariable String WORKERID) {
 		return service.getWorkerLocation(WORKERID);
 	}
+
+	@ApiOperation(value = "Get Worker Locations", notes = "Allows to get the locations of all worker")
+	@ApiResponses({
+			@ApiResponse(code = 200, message = "The Response object."),
+			@ApiResponse(code = 401, message = "Authorization information is missing or invalid."),
+	})
+	@RequestMapping(value = "/workerlocation", method = RequestMethod.GET)
+	public List<WorkerLocationResponse> getWorkerLocations() {
+		return service.getWorkerLocations();
+	}
 	 
 	 @ApiOperation(value = "Add Worker Location by WorkerId", notes = "Allows to save the  worker location by passing the Worker Id in path variable")
 	 @ApiResponses({
@@ -76,10 +86,10 @@ public class WorkerReferenceDataController {
 	/**
 	 * Save the Plant Location and Name data while initializing the service.This is predefined refrence data so wants to save it before accessing it.
 	 */
-	/*@PostConstruct
+	@PostConstruct
 	public void init() {
 		service.createPlantLocationNames();
-	}*/
+	}
 
 	@RequestMapping(value = "/health", method = RequestMethod.GET)
 	public ResponseEntity<String> getHealth() {

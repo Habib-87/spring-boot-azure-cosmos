@@ -18,4 +18,6 @@ public interface WorkerRefDataCustomRepo {
 	
 	void addPlantLocations(List<PlantLocationName> list);
 
+	List<WorkerLocation> getWorkerLocations();
+
 }

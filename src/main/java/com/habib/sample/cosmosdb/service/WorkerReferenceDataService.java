@@ -95,4 +95,16 @@ public class WorkerReferenceDataService {
 		return response;
 	}
 
+	public List<WorkerLocationResponse> getWorkerLocations() {
+		List<WorkerLocation> wl = customRepo.getWorkerLocations();
+		List<WorkerLocationResponse> responses = wl.stream().map(name -> {
+			WorkerLocationResponse workerLocationResponse = new WorkerLocationResponse();
+			workerLocationResponse.setWorkerid(name.getWorkerid());
+			workerLocationResponse.setLocation(name.getLocation());
+			return workerLocationResponse;
+		}).collect(Collectors.toList());
+
+		return responses;
+	}
+
 }
