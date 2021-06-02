@@ -42,7 +42,7 @@ public class SwaggerConfig {
 				.groupName("v1")
 				.apiInfo(portalApiInfo("V1"))
 				.select().apis(RequestHandlerSelectors.basePackage("com.habib"))
-				.paths(PathSelectors.regex("/worker/refdata/v1/.*")).build();
+				.paths(PathSelectors.regex("/v1/.*")).build();
 	}
 	
 
