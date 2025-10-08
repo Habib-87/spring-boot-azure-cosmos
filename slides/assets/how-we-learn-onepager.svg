@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#FFFFFF"/>
+  
+  <!-- Step 1: Stakeholder Mapping -->
+  <g id="step1" transform="translate(20, 80)">
+    <rect x="0" y="0" width="140" height="160" rx="8" fill="#F3F4F6" stroke="#F3F4F6"/>
+    <!-- Face icon (circle) -->
+    <circle cx="70" cy="40" r="25" fill="#93C5FD" stroke="#3B82F6" stroke-width="2"/>
+    <text x="70" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Stakeholder</text>
+    <text x="70" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Mapping</text>
+    <text x="70" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">Who needs what —</text>
+    <text x="70" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">and why</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <g id="arrow1" transform="translate(168, 150)">
+    <path d="M 0 0 L 35 0 L 35 -5 L 45 5 L 35 15 L 35 10 L 0 10 Z" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Step 2: Current State -->
+  <g id="step2" transform="translate(220, 80)">
+    <rect x="0" y="0" width="140" height="160" rx="8" fill="#F3F4F6" stroke="#F3F4F6"/>
+    <!-- Server icon (rectangle) -->
+    <rect x="45" y="20" width="50" height="40" rx="3" fill="#60A5FA" stroke="#3B82F6" stroke-width="2"/>
+    <text x="70" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Current State</text>
+    <text x="70" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">Apps, data, tech —</text>
+    <text x="70" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">one map</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <g id="arrow2" transform="translate(368, 150)">
+    <path d="M 0 0 L 35 0 L 35 -5 L 45 5 L 35 15 L 35 10 L 0 10 Z" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Step 3: Business Process -->
+  <g id="step3" transform="translate(420, 80)">
+    <rect x="0" y="0" width="140" height="160" rx="8" fill="#F3F4F6" stroke="#F3F4F6"/>
+    <!-- Conveyor belt icon (rounded rectangle) -->
+    <rect x="45" y="20" width="50" height="40" rx="8" fill="#93C5FD" stroke="#3B82F6" stroke-width="2"/>
+    <text x="70" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Business</text>
+    <text x="70" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Process</text>
+    <text x="70" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">How work really</text>
+    <text x="70" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">flows</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <g id="arrow3" transform="translate(568, 150)">
+    <path d="M 0 0 L 35 0 L 35 -5 L 45 5 L 35 15 L 35 10 L 0 10 Z" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Step 4: Reverse Engineering -->
+  <g id="step4" transform="translate(620, 80)">
+    <rect x="0" y="0" width="140" height="160" rx="8" fill="#F3F4F6" stroke="#F3F4F6"/>
+    <!-- Magnifying glass icon (circle) -->
+    <circle cx="70" cy="40" r="25" fill="#60A5FA" stroke="#3B82F6" stroke-width="3"/>
+    <line x1="87" y1="57" x2="100" y2="70" stroke="#3B82F6" stroke-width="3"/>
+    <text x="70" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Reverse</text>
+    <text x="70" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#111827">Engineering</text>
+    <text x="70" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#374151">Trace data and code</text>
+    <text x="70" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#374151">to the truth</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="20" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#111827">How We Learn About Your Existing Application</text>
+  <text x="20" y="55" font-family="Arial, sans-serif" font-size="16" fill="#3B82F6">Know Before You Build</text>
+  
+  <!-- Footer -->
+  <text x="20" y="280" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#374151">Outcome: clarity → confidence → faster value</text>
+</svg>
